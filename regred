@@ -1,0 +1,9 @@
+function insertAfterOccurrence(str, arr, insertStr) {
+  let regex = new RegExp(`(${arr.join('|')})`, 'g');
+  return str.replace(regex, `$1${insertStr}`);
+}
+let abc = "grt iop fds fds";
+let a = ["iop", "fds", "qwe"];
+let b = "hn";
+let result = insertAfterOccurrence(abc, a, b);
+console.log(result); // "grt iophn fdshn fdshn"
